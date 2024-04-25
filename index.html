@@ -91,9 +91,12 @@
 /*	nav bar */
 	
 	.bigtitle{font-family: 'Pretendard-Bold'; font-size: 5vw; padding-bottom: 15px;}
+	.bigtitle1{font-family: 'Pretendard-Black'; font-size: 5vw; padding-bottom: 15px; padding-top: 15px;}
 	.middletitle{font-family: 'Pretendard-Bold'; font-size: 2.5vw; padding-bottom: 40px;}
 	.middletitle1{font-family: 'Pretendard-Bold'; font-size: 2vw; padding-bottom: 40px;}
+	.middletitle2{font-family: 'Pretendard-Regular'; font-size: 4vw; padding-bottom: 20px;}
 	.smalltitle{font-family: 'Pretendard-Regular'; font-size: 1.5vw; padding-bottom: 20px;}
+	.smalltitle1{font-family: 'Pretendard-Regular'; font-size: 5vw; padding-bottom: 20px;}
 	.smallp{font-family: 'Pretendard-Regular'; font-size: 1.2vw; padding-bottom: 20px; line-height: 1.5;}
 
 /*	font*/
@@ -120,9 +123,16 @@
 
 /*세번째 블록*/
 	.container01{padding-left: 2vw; padding-top:5vw; display: flex; align-items: center; width: 800px;}
+	.flex01 {display: flex; gap: 20%}
+	.flex02 {display: flex; gap: 10%}
+	.flexitem{width: 47.5%;}
+	.stactic {align-items: center;}
+	.stactic p {font-family: Pretendard-Regular; font-size:0.8vw; padding-bottom: 5vw; }
+	.stacticnum {padding-top: 50px}
+	.stactic01 {padding-top: 15px;}
 
 /*네번째 블록*/
-	.earth {padding-top:10vw;}
+	.earth {padding-top:5vw;}
 	.earth01 {background-image: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTc5Ym5zc2E4aTRxMmFramxrM3h5Ym1ueDdqdmZ3ZTJiejJuZmo5ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8FoLIrNT2jK0evs6bG/giphy-downsized-large.gif); 
 		background-repeat: no-repeat; 
 		background-size: cover;
@@ -139,12 +149,49 @@
 	.Infonum {font-family: "Raleway Dots"; font-size: 5vw; color: green; padding-bottom: 20px;}
 	.container03{padding-left: 2vw; padding-top:5vw; display: flex; align-items: center; width: 600px;}
 
-	.container04{padding-left: 10vw; padding-top:5vw; display: flex; align-items: center; width: 600px;}
+	.container04{padding-left: 2vw; padding-top:5vw; display: flex; align-items: right; text-align: right; width: 600px; position: absolute; top:0; right: 0;}
 
-	.box01 {border: 1px solid white; position: relative; width: 150px;}
+	.box01 {border: 1px solid white; position: relative; width: 150px; float: right; overflow: auto;}
 	.box01 p {margin: auto; text-align: center; padding-top: 20px;}
+	.box02 {overflow: auto;}
 	.smallp01{font-family: 'Pretendard-Regular'; font-size: 0.8vw; padding-bottom: 20px; padding top: 40px; line-height: 1.5;}
+	.right {position: relative; height: 50vh}
 
+
+
+/*여섯번째 블록*/
+
+	.Coretech {background-image: url(img/butterfly.png); background-repeat: no-repeat;background-size: cover;}
+	.wrap03 {margin: auto; text-align: center; padding-top: 5vw; padding-bottom: 5vw;}
+
+	.coretechbelow {margin: auto; font-family: "Raleway Dots"; font-size: 5vw; text-align: center; letter-spacing: 13vw;}
+	.coretechitem {width: 500px; float: right; padding:200px;}
+	.coretechitem01 {overflow: hidden;}
+
+
+
+/*일곱번째 블록*/
+
+	.green {background-color: #78FFA1; color: black;}
+	.flex03 {display: flex;}
+	.flexitem01{width: 10%;}
+	.howimg {background: url(img/fly.png); width: 500px; background-size: cover;}
+	.greenwrap {padding: 50px 20px 50px 20px; margin: auto; width: 800px}
+	.blackbox {background-color: black;
+			    color: white; /* 텍스트를 흰색으로 설정 */
+			    width: 200px; /* 원하는 너비로 설정 */
+			    height: 30px; /* 원하는 높이로 설정 */
+			    text-align: center; /* 텍스트를 가운데 정렬 */
+			    line-height: 30px; /* 텍스트를 상하 중앙 정렬 */ }
+	.blackboxalign {float: right;}
+
+	.howtitle {padding: 30px 30px 20px 0px;}
+	.howtitle01 {border-top: 2px solid black; padding: 20px 30px 10px 0px;}
+
+
+/*여덟번째 블록*/
+
+	.flexitem02{width: 30%;}
 
 
 </style>
@@ -207,19 +254,52 @@
 	</section>
 
 	<section class="bye">
-		<div class="wrap">
-			<div class="container01">
-				<div>
-					<div class="smallp">
-					About tsetse
+		<div class="wrap flex01">
+			<div class="flexitem">
+				<div class="container01">
+					<div>
+						<div class="smallp">
+						About tsetse
+						</div>
+						<div class="middletitle1">잠들지 못하던 밤은 이제 안녕!</div>
+						<p class="smallp">아프리카에서 온 체체는 수많은 역사 속에서 수면제의 효과를 증명해왔습니다.<br>체체와 함께라면 즐거운 꿈의 나라로 떠날 수 있습니다.</p>
 					</div>
-					<div class="middletitle1">잠들지 못하던 밤은 이제 안녕!</div>
-					<p class="smallp">아프리카에서 온 체체는 수많은 역사 속에서 수면제의 효과를 증명해왔습니다.<br>체체와 함께라면 즐거운 꿈의 나라로 떠날 수 있습니다.</p>
-				</div>
-				<div class="container">
-					<div>리스트</div>
 				</div>
 			</div>
+			<div class="flexitem stactic01">
+				<div class="flex01">
+					<div class="stactic"> 
+						<div class="flex02">
+						 	<div class="smalltitle1">65</div>
+						 	<div class="smalltitle stacticnum">million</div>
+						</div>
+						<p style="padding-left: 40px;">sleeping people</p>
+					</div>
+					<div class="stactic"> 
+						<div class="flex02">
+						 	<div class="smalltitle1">5</div>
+						 	<div class="smalltitle stacticnum">million</div>
+						</div>
+						<p style="padding-left: 2px;">Deep-sleeping people</p>
+					</div>
+				</div>
+				<div class="flex01">
+					<div class="stactic"> 
+						<div class="flex02">
+						 	<div class="smalltitle1">19</div>
+						 	<div class="smalltitle stacticnum">CE</div>
+						</div>
+						<p style="padding-left: 50px;">from</p>
+					</div>
+					<div class="stactic"> 
+						<div class="flex01">
+						 	<div class="smalltitle1">NOW</div>
+						</div>
+						<p style="padding-left: 65px;">until</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</section>
 
@@ -258,15 +338,22 @@
 
 	<section class="Info">
 		<div class="wrap">
-			<div class="container03">
-				<div>
-					<div class="Infonum" style="padding-bottom: 50px;">02</div>
-					<p class="smallp01" style="padding-bottom: 20px;">체체를 위한 별도 케이스를 구매할 수 있습니다.</p>
-					<div class="box01">
-						<p class="smallp">구매하기</p>
+			<div class="position">
+				<div class="right">
+					<div class="container04">
+						<div>
+							<div class="Infonum" style="padding-bottom: 50px;">02</div>
+							<p class="smallp01" style="padding-bottom: 20px;">체체를 위한 별도 케이스를 구매할 수 있습니다.</p>
+
+							<div class="box02">
+								<div class="box01">
+									<p class="smallp">구매하기</p>
+								</div>
+							</div>
+							<div class="middletitle1" style="padding-top: 50px;">내 주머니 안에 쏙 들어오는 크기와 무게</div>
+							<p class="smallp">체체는 단일 성분만으로도 강력한 효과를 자랑합니다. 당신은 언제 어디서나 행복한 단잠에 빠져들 수 있습니다. 아무리 시끄러운 곳이라도 상관없이 체체는 당신의 수면을 돕습니다.</p>
+						</div>
 					</div>
-					<div class="middletitle1" style="padding-top: 50px;">내 주머니 안에 쏙 들어오는 크기와 무게</div>
-					<p class="smallp">체체는 단일 성분만으로도 강력한 효과를 자랑합니다. 당신은 언제 어디서나 행복한 단잠에 빠져들 수 있습니다. 아무리 시끄러운 곳이라도 상관없이 체체는 당신의 수면을 돕습니다.</p>
 				</div>
 			</div>
 		</div>
@@ -284,89 +371,118 @@
 		</div>
 	</section>
 
-	<section class="Coretech">
-		<div>CORE TECH</div>
-	</section>
-
-	<section class="tsetse">
-		<div>TSETSE</div>
-		<p>감염된 체체파리가 사람을 물고 피부에 원생동물을 주입할 때 사람들에게 전파되는 트리파노소마 브루세이 감비엔스와 트리파노소마 브루세이 로데시엔 성분을 이용합니다.</p>
-	</section>
-
-	<section class="nano">
-		<div>NANO TECH</div>
-		<p>이들은 단순한 약물이 아닌 하나의 나노 생물로 몸 안에서 자생하며 당신의 잠을 돕습니다. 척수를 타고 뇌로 전파되는 체체는 불면증에 효과적입니다.</p>
-	</section>
-
-	<section class="how">
-		<div class="howtitle">
-			<div>HOW TO USE</div>
-			<div class="box1">용법 용량</div>
-		
-			<div>전연령 사용 가능 / 1정 트리파노소마 브루세이 로데시엔 (HAT) ... 37.5mg</div>
-			<div>1회 1~2포씩 1일 1회. 1일 최대 2회를 초과하여 복용하지 않는다. 방사선 노출 시 성분이 손상을 입으니 각별히 주의할 것.</div>
+	<section>
+		<div style="padding-top:80px;">
+			<div class="Coretech">
+				<div class="wrap03">
+					<div class="bigtitle1">CORETECH</div>
+				</div>
+			</div>
 		</div>
 
-		<div class="method">
-			<div class="number">01</div>
-			<div class="bighow">START</div>
-			<div class="smallhow">캡슐을 꺼내세요. 투명 캡슐을 반으로 나누면 당신의 체체를 만날 수 있습니다.</div>
-
-			<div class="number">02</div>
-			<div class="bighow">WAKE UP</div>
-			<div class="smallhow">체체를 두번 건드리세요</div>
-
-			<div class="number">03</div>
-			<div class="bighow">USE TSETSE</div>
-			<div class="smallhow">깨어난 체체를 살갗 근처로 데려갑니다.</div>
+		<div class="coretechbelow">TSETSE</div>
+		<div class="smallp">
+			<div class="coretechitem01">
+				<p class="coretechitem">감염된 체체파리가 사람을 물고 피부에 원생동물을 주입할 때 사람들에게 전파되는 트리파노소마 브루세이 감비엔스와 트리파노소마 브루세이 로데시엔 성분을 이용합니다.</p>
+			</div>
 		</div>
+	</section>
+
+	<section class="wrap">
+		<div class="nano">
+			<div class="middletitle1">NANO TECH</div>
+		</div>
+		<p class="smallp" style="width: 500px;">이들은 단순한 약물이 아닌 하나의 나노 생물로 몸 안에서 자생하며 당신의 잠을 돕습니다. 척수를 타고 뇌로 전파되는 체체는 불면증에 효과적입니다.</p>
 	</section>
 
 	<section>
-		<div>
+		<div class="green flex03">
+			<div class="howimg flexitem01"></div>
+			<div class="greenwrap">
+				<div class="howtitle">
+					<div class="flex01">
+						<div class="middletitle2">HOW TO USE</div>
+						<div class="blackboxalign flexitem">
+							<div class="blackbox">용법 용량</div>
+						</div>
+					</div>
+					
+					<div class="smallp">전연령 사용 가능 / 1정 트리파노소마 브루세이 로데시엔 (HAT) ... 37.5mg</div>
+					<div class="smallp">1회 1~2포씩 1일 1회. 1일 최대 2회를 초과하여 복용하지 않는다. 방사선 노출 시 성분이 손상을 입으니 각별히 주의할 것.</div>
+				</div>
+
+				<div class="howtitle flex01">
+					<div class="number smallp flexitem01">01</div>
+					<div class="middletitle2 flexitem">START</div>
+					<div class="smallp flexitem">캡슐을 꺼내세요. 투명 캡슐을 반으로 나누면 당신의 체체를 만날 수 있습니다.</div>
+				</div>
+
+				<div class="howtitle01 flex01">
+					<div class="number smallp flexitem01">02</div>
+					<div class="middletitle2 flexitem">WAKE UP</div>
+					<div class="smallp flexitem">체체를 두번 건드리세요</div>
+				</div>
+
+				<div class="howtitle01 flex01">
+					<div class="number smallp flexitem01">03</div>
+					<div class="middletitle2 flexitem">USE TSETSE</div>
+					<div class="smallp flexitem">깨어난 체체를 살갗 근처로 데려갑니다.</div>
+				</div>
+			</div>
+		</div>
+		<div class="smallp" style="color: green;">
 			체체는 명시된 체체는 명시된 사항의 미숙지로 인한 피해에 책임을 지지 않습니다. 
 		</div>
 	</section>
 
-
 	<section>
-		<div>
-			<div class="">01</div>
-		</div>
-
-		<div>
-			<div>02</div>
-		</div>
-
-		<div>
-			<div>03</div>
-		</div>
-	</section>
-
-
-	<section>
-		<div class="box">구매하기</div>
-	</section>
-
-
-	<section>
-		<div class="warning">일반적으로 ‘수면병’이라고 알려진 ‘인간 아프리카 트리파노소마증’은 사하라 이남 아프리카에서 체체파리가 옮기는 기생충병입니다.
-
-			<div> 
-				체체의 부작용은 세 부위에 걸쳐 나타날 수 있습니다. 
-				<div>피부</div>
-				<div>수일 내지 2주 이내에 체체파리가 문 부위에 돌기가 생길 수 있습니다. 이는 짙은 붉은색으로 변하며 통증이 있고 부어 오른 궤양이 될 수 있습니다.</div>
+		<div class="flex01 wrap03">
+			<div class="flexitem01">
+				<div class="smallp">01</div>
 			</div>
-			<div>
-				<div>혈액 및 림프절</div>
-				<div>
-				감염은 몇 주 또는 몇 개월의 기간에 걸쳐 혈액 및 림프로 확산됩니다. 그런 다음, 감염자는 나타났다 사라졌다 하는 발열, 오한, 두통, 근육통 및 관절통을 경험합니다. 일부 사람들의 경우, 발진이 발생하고 목 뒤쪽을 따라 림프절이 비대됩니다. 빈혈이 발생할 수 있습니다.
+
+			<div class="flexitem01">
+				<div class="smallp">02</div>
+			</div>
+
+			<div class="flexitem01">
+				<div class="smallp">03</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section>
+		<div class="box">
+				<p class="smalltitle">구매하기</p>
+		</div>
+	</section>
+
+
+	<section>
+		<div class="warning wrap">
+
+			<div class="smallp">
+			일반적으로 ‘수면병’이라고 알려진 ‘인간 아프리카 트리파노소마증’은 사하라 이남 아프리카에서 체체파리가 옮기는 기생충병입니다.
+			</div>
+
+			<div class="flex">
+				<div class="flexitem02"> 
+					체체의 부작용은 세 부위에 걸쳐 나타날 수 있습니다. 
+					<div>피부</div>
+					<div>수일 내지 2주 이내에 체체파리가 문 부위에 돌기가 생길 수 있습니다. 이는 짙은 붉은색으로 변하며 통증이 있고 부어 오른 궤양이 될 수 있습니다.</div>
 				</div>
-			</div>
-			<div>
-				<div>뇌 및 뇌척수액</div>
-				<div>
-				뇌 및 뇌척수액에 영향이 있을 때는 두통이 지속될 수 있습니다. 졸음이 오고, 집중력을 상실하며, 균형 및 보행 문제를 겪습니다. 졸음이 악화되며, 활동을 하다가도 잠들 수 있습니다. 사망은 증상이 발생한 후 수개월 또는 2~3년 이내에 발생합니다. 
+				<div class="flexitem02">
+					<div>혈액 및 림프절</div>
+					<div>
+					감염은 몇 주 또는 몇 개월의 기간에 걸쳐 혈액 및 림프로 확산됩니다. 그런 다음, 감염자는 나타났다 사라졌다 하는 발열, 오한, 두통, 근육통 및 관절통을 경험합니다. 일부 사람들의 경우, 발진이 발생하고 목 뒤쪽을 따라 림프절이 비대됩니다. 빈혈이 발생할 수 있습니다.
+					</div>
+				</div>
+				<div class="flexitem02">
+					<div>뇌 및 뇌척수액</div>
+					<div>
+					뇌 및 뇌척수액에 영향이 있을 때는 두통이 지속될 수 있습니다. 졸음이 오고, 집중력을 상실하며, 균형 및 보행 문제를 겪습니다. 졸음이 악화되며, 활동을 하다가도 잠들 수 있습니다. 사망은 증상이 발생한 후 수개월 또는 2~3년 이내에 발생합니다. 
+					</div>
 				</div>
 			</div>
 
