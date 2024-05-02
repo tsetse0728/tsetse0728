@@ -17,6 +17,14 @@
 
 <style> 
 		@font-face {
+		    font-family: 'Pretendard-Light';
+		    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+		    font-weight: 100;
+		    font-style: light;
+		}
+
+
+		@font-face {
 		    font-family: 'Pretendard-Regular';
 		    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
 		    font-weight: 400;
@@ -52,6 +60,37 @@
 		font-style: bold;
 	}
 
+	.contain {
+	  width: 80%;
+	  height: 80%;
+	  background-color: #fff;
+
+	  border: 2px solid #333;
+	  border-radius: 10px;
+	  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+
+	.filter-invert {
+	  mix-blend-mode: difference; /* 반전 효과 */
+	}
+	#circle {
+	  width: 50px;
+	  height: 50px;
+	  background-color: white; /* 흰색 배경 */
+	  mix-blend-mode: difference; /* 반전 효과 */
+	  border: 2px solid #fff;
+	  border-radius: 50%;
+	  position: fixed;
+	  pointer-events: none;
+	  transition: transform 0.1s ease-out;
+	}
+
+	#circle-container {
+	  position: relative;
+	  width: 200px;
+	  height: 200px;
+	}
+
 	.navbar {display: flex;
 		justify-content:space-between;
 		align-content: center;
@@ -63,6 +102,10 @@
 	.box {border: 1px solid white; position: relative;}
 
 	.logo{size: 100px;}
+
+	.logo1{height: 30px; padding-bottom: 20px;}
+	.icon{padding-top: 2vw; height: 50px; padding-bottom: 2vw;}
+
 
 	.flex{display: flex;
 	justify-content: space-between;
@@ -94,10 +137,12 @@
 	.bigtitle1{font-family: 'Pretendard-Black'; font-size: 5vw; padding-bottom: 15px; padding-top: 15px;}
 	.middletitle{font-family: 'Pretendard-Bold'; font-size: 2.5vw; padding-bottom: 40px;}
 	.middletitle1{font-family: 'Pretendard-Bold'; font-size: 2vw; padding-bottom: 40px;}
-	.middletitle2{font-family: 'Pretendard-Regular'; font-size: 4vw; padding-bottom: 20px;}
+	.middletitle2{font-family: 'Pretendard-Light'; font-size: 4vw; padding-bottom: 20px;}
 	.smalltitle{font-family: 'Pretendard-Regular'; font-size: 1.5vw; padding-bottom: 20px;}
 	.smalltitle1{font-family: 'Pretendard-Regular'; font-size: 5vw; padding-bottom: 20px;}
 	.smallp{font-family: 'Pretendard-Regular'; font-size: 1.2vw; padding-bottom: 20px; line-height: 1.5;}
+
+	.sosmallp{font-family: 'Pretendard-Regular'; font-size: 0.8vw; padding-bottom: 20px; line-height: 1.5;}
 
 /*	font*/
 
@@ -149,7 +194,7 @@
 	.Infonum {font-family: "Raleway Dots"; font-size: 5vw; color: green; padding-bottom: 20px;}
 	.container03{padding-left: 2vw; padding-top:5vw; display: flex; align-items: center; width: 600px;}
 
-	.container04{padding-left: 2vw; padding-top:5vw; display: flex; align-items: right; text-align: right; width: 600px; position: absolute; top:0; right: 0;}
+	.container04{padding-left: 2vw; padding-top:2vw; display: flex; align-items: right; text-align: right; width: 600px; position: absolute; top:0; right: 0;}
 
 	.box01 {border: 1px solid white; position: relative; width: 150px; float: right; overflow: auto;}
 	.box01 p {margin: auto; text-align: center; padding-top: 20px;}
@@ -165,7 +210,7 @@
 	.wrap03 {margin: auto; text-align: center; padding-top: 5vw; padding-bottom: 5vw;}
 
 	.coretechbelow {margin: auto; font-family: "Raleway Dots"; font-size: 5vw; text-align: center; letter-spacing: 13vw;}
-	.coretechitem {width: 500px; float: right; padding:200px;}
+	.coretechitem {width: 500px; float: right; padding:120px; padding-top: 500px;}
 	.coretechitem01 {overflow: hidden;}
 
 
@@ -192,12 +237,24 @@
 /*여덟번째 블록*/
 
 	.flexitem02{width: 30%;}
+	footer {padding-top: 30vw; padding-bottom: 20px;}
+	.buyfly {background-image: url(img/fly1.png); background-repeat: no-repeat;background-size: cover;}
+	.howtoimg {background-image: url(img/howto01.png); background-repeat: no-repeat;background-size: cover; padding-top: 10vw; padding-bottom: 10vw; padding-left: 2vw; padding-right: 30vw;}
+
+
+	.fly02img {background-image: url(img/fly2.png); background-repeat: no-repeat;background-size: cover; padding-bottom: 50vw;}
+	.lineimg {background-image: url(img/line.svg); background-repeat: no-repeat;background-size: cover; }
+	.flex04 {display: flex;}
+	.flexitem04{width: 80%;}
+	.flexitem05{width: 20%;}
+
 
 
 </style>
 
 
 <body>
+	
 	<nav class="navbar">
 		<div class="logo" onclick="sound.play();">
 			<img src="img/logo.svg">
@@ -233,7 +290,7 @@
 					<p class="smalltitle">구매하기</p>
 				</div>
 			</div>
-			<img class="drug" src="img/tsetse1.png" alt="drug">
+			<img class="drug" src="img/tsetse1.png">
 			<img class="repeattse" src="img/text1.svg" alt="repeattse">
 		</div>
 	</header>
@@ -324,23 +381,21 @@
 		<div class="africa">FROM AFRICA</div>
 	</section>
 
-	<section class="Info">
+	<section class="Info lineimg">
 		<div class="wrap">
-			<div class="container03">
-				<div>
+			<div class="container03 flex04">
+				<div class="flexitem04">
 					<div class="Infonum">01</div>
 					<div class="middletitle1">즉각적이고 강한 효과</div>
 					<p class="smallp">체체는 단일 성분만으로도 강력한 효과를 자랑합니다. 당신은 언제 어디서나 행복한 단잠에 빠져들 수 있습니다. 아무리 시끄러운 곳이라도 상관없이 체체는 당신의 수면을 돕습니다.</p>
 				</div>
+				<div class="flexitem05"><img style="height: 900px;" src="img/tsetse21.png"></div>
 			</div>
 		</div>
-	</section>
-
-	<section class="Info">
 		<div class="wrap">
 			<div class="position">
-				<div class="right">
-					<div class="container04">
+				<div class="right flex04">
+					<div class="container04 flexitem04">
 						<div>
 							<div class="Infonum" style="padding-bottom: 50px;">02</div>
 							<p class="smallp01" style="padding-bottom: 20px;">체체를 위한 별도 케이스를 구매할 수 있습니다.</p>
@@ -355,18 +410,17 @@
 						</div>
 					</div>
 				</div>
+				<div class="flexitem05"><img style="height: 600px;" src="img/cage.png"></div>
 			</div>
 		</div>
-	</section>
-
-	<section class="Info">
 		<div class="wrap">
-			<div class="container03">
-				<div>
+			<div class="container03 flex04">
+				<div class="flexitem04">
 					<div class="Infonum">03</div>
 					<div class="middletitle1">지구를 걱정할 필요없는 친환경 수면제</div>
 					<p class="smallp">폐기 시 전혀 걱정할 필요가 없습니다. 체체는 자연에서 온 천연 소재로 지구에 해로운 소재는 포함되어 있지 않습니다. 다 쓰고 남은 체체는 손 위에 올려두고 하늘 높이 들어보세요. 눈 깜짝할 새에 날아갈 테니까요.</p>
 				</div>
+				<div class="flexitem05"><img style="height: 800px;" src="img/hand.png"></div>
 			</div>
 		</div>
 	</section>
@@ -381,19 +435,16 @@
 		</div>
 
 		<div class="coretechbelow">TSETSE</div>
-		<div class="smallp">
-			<div class="coretechitem01">
-				<p class="coretechitem">감염된 체체파리가 사람을 물고 피부에 원생동물을 주입할 때 사람들에게 전파되는 트리파노소마 브루세이 감비엔스와 트리파노소마 브루세이 로데시엔 성분을 이용합니다.</p>
+
+		<div class="fly02img">
+			<div class="smallp">
+				<div class="coretechitem01">
+					<p class="coretechitem">감염된 체체파리가 사람을 물고 피부에 원생동물을 주입할 때 사람들에게 전파되는 트리파노소마 브루세이 감비엔스와 트리파노소마 브루세이 로데시엔 성분을 이용합니다.</p>
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="wrap">
-		<div class="nano">
-			<div class="middletitle1">NANO TECH</div>
-		</div>
-		<p class="smallp" style="width: 500px;">이들은 단순한 약물이 아닌 하나의 나노 생물로 몸 안에서 자생하며 당신의 잠을 돕습니다. 척수를 타고 뇌로 전파되는 체체는 불면증에 효과적입니다.</p>
-	</section>
 
 	<section>
 		<div class="green flex03">
@@ -430,31 +481,32 @@
 				</div>
 			</div>
 		</div>
-		<div class="smallp" style="color: green;">
+		
+		<div class="buyfly">
+
+			<div class="smallp" style="color: green;">
 			체체는 명시된 체체는 명시된 사항의 미숙지로 인한 피해에 책임을 지지 않습니다. 
 		</div>
-	</section>
 
-	<section>
 		<div class="flex01 wrap03">
 			<div class="flexitem01">
-				<div class="smallp">01</div>
+				<div class="smallp howtoimg">01</div>
 			</div>
 
 			<div class="flexitem01">
-				<div class="smallp">02</div>
+				<div class="smallp howtoimg">02</div>
 			</div>
 
 			<div class="flexitem01">
-				<div class="smallp">03</div>
+				<div class="smallp howtoimg">03</div>
 			</div>
 		</div>
-	</section>
 
-
-	<section>
-		<div class="box">
-				<p class="smalltitle">구매하기</p>
+			<div style="padding-top:30vw; padding-bottom: 10vw;">
+				<div class="box">
+						<p class="smalltitle">구매하기</p>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -462,25 +514,29 @@
 	<section>
 		<div class="warning wrap">
 
-			<div class="smallp">
+			<div class="smalltitle">
 			일반적으로 ‘수면병’이라고 알려진 ‘인간 아프리카 트리파노소마증’은 사하라 이남 아프리카에서 체체파리가 옮기는 기생충병입니다.
 			</div>
 
 			<div class="flex">
 				<div class="flexitem02"> 
-					체체의 부작용은 세 부위에 걸쳐 나타날 수 있습니다. 
-					<div>피부</div>
-					<div>수일 내지 2주 이내에 체체파리가 문 부위에 돌기가 생길 수 있습니다. 이는 짙은 붉은색으로 변하며 통증이 있고 부어 오른 궤양이 될 수 있습니다.</div>
+					<div class="smallp">
+					체체의 부작용은 세 부위에 걸쳐 나타날 수 있습니다. </div>
+					<img class="icon" src="img/Group 11.png">
+					<div class="middletitle1">피부</div>
+					<div class="smallp">수일 내지 2주 이내에 체체파리가 문 부위에 돌기가 생길 수 있습니다. 이는 짙은 붉은색으로 변하며 통증이 있고 부어 오른 궤양이 될 수 있습니다.</div>
 				</div>
 				<div class="flexitem02">
-					<div>혈액 및 림프절</div>
-					<div>
+					<img class="icon" src="img/Group 12.png">
+					<div class="middletitle1">혈액 및 림프절</div>
+					<div class="smallp">
 					감염은 몇 주 또는 몇 개월의 기간에 걸쳐 혈액 및 림프로 확산됩니다. 그런 다음, 감염자는 나타났다 사라졌다 하는 발열, 오한, 두통, 근육통 및 관절통을 경험합니다. 일부 사람들의 경우, 발진이 발생하고 목 뒤쪽을 따라 림프절이 비대됩니다. 빈혈이 발생할 수 있습니다.
 					</div>
 				</div>
 				<div class="flexitem02">
-					<div>뇌 및 뇌척수액</div>
-					<div>
+					<img class="icon" src="img/Group 13.png">
+					<div class="middletitle1">뇌 및 뇌척수액</div>
+					<div class="smallp">
 					뇌 및 뇌척수액에 영향이 있을 때는 두통이 지속될 수 있습니다. 졸음이 오고, 집중력을 상실하며, 균형 및 보행 문제를 겪습니다. 졸음이 악화되며, 활동을 하다가도 잠들 수 있습니다. 사망은 증상이 발생한 후 수개월 또는 2~3년 이내에 발생합니다. 
 					</div>
 				</div>
@@ -490,39 +546,36 @@
 		</div>
 	</section>
 
-	<footer>
-		<ul class="menu flex">
-			<li>
-				<a href="#top">
-					<div>TSETSE</div>
-					<div>
-						이 사이트는 전 세계 사용자들을 위해 TSETSE(유)에서 제작하였으며, 내용상 모든 책임은 TSETSE(유)에 있습니다. 본 홈페이지 상의 건강 정보는 교육적인 목적으로 제공되며, 의사와의 상담을 대신하지 않습니다.당신을 위한 꿈, 체체.  당신을 기다립니다. 이 내용은 소비자의 안전한 선택을 위해 허가 사항을 요약한 것으로 사용 복용 전 반드시 첨부문서를 확인할 것을 관고드립니다.
-					</div>
-					<div>Copyright&copy;2024 TSETSE Inc. All rights reserved.</div>
-				</a>
+	<footer style="padding-top:100px;">
+		<div class="wrap flex02">
+				<div class="flexitem02" style="padding-right: 100px;">
+						<img class="logo1" src="img/logo.svg">
+						<div class="sosmallp">
+							이 사이트는 전 세계 사용자들을 위해 TSETSE(유)에서 제작하였으며, 내용상 모든 책임은 TSETSE(유)에 있습니다. 본 홈페이지 상의 건강 정보는 교육적인 목적으로 제공되며, 의사와의 상담을 대신하지 않습니다.당신을 위한 꿈, 체체.  당신을 기다립니다. 이 내용은 소비자의 안전한 선택을 위해 허가 사항을 요약한 것으로 사용 복용 전 반드시 첨부문서를 확인할 것을 관고드립니다.
+						</div>
+						<div class="sosmallp">Copyright&copy;2024 TSETSE Inc. All rights reserved.</div>
+				</div>
+				<div class="flexitem03">
+						<div class="middletitle1">OUR STORE</div>
+						<div class="smallp">
+							<div>HOME</div>
+							<div>ABOUT</div>
+							<div>SERVICE</div>
+							<div>CONTACT</div>
+						</div>
+				</div>
+				<div class="flexitem03">
 
-				<a href="#top">
-					<div>OUR STORE</div>
-					<div>
-						<div>HOME</div>
-						<div>ABOUT</div>
-						<div>SERVICE</div>
-						<div>CONTACT</div>
-					</div>
-				</a>
-
-				<a href="#top">
-					<div>CONTECT US</div>
-					<div>
-						<div>lynn041021@gmail.com</div>
-						<div>@tchetche82.</div>
-					</div>
-				</a>
-			</li>
-		</ul>	
+						<div class="middletitle1">CONTECT US</div>
+						<div class="smallp">
+							<div>lynn041021@gmail.com</div>
+							<div>@tchetche82.</div>
+						</div>
+				</div>
+		</div>	
 	</footer>
 
-
+	<script src="js/script.js"></script>
 </body>
 
 
